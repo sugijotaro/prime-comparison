@@ -9,5 +9,10 @@ def is_prime(n):
 
 
 if __name__ == "__main__":
-    primes_up_to_100 = [i for i in range(2, 101) if is_prime(i)]
-    print(primes_up_to_100)
+    limit = int(input("いくつまでの素数を出力しますか？: "))
+    import time
+    start_time = time.time()
+    primes = [i for i in range(2, limit+1) if is_prime(i)]
+    end_time = time.time()
+    print(primes)
+    print(f"計算時間: {end_time - start_time:.5f}秒")

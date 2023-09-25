@@ -10,5 +10,10 @@ def sieve_of_eratosthenes(limit):
 
 
 if __name__ == "__main__":
-    primes_up_to_100 = sieve_of_eratosthenes(101)
-    print(primes_up_to_100)
+    limit = int(input("いくつまでの素数を出力しますか？: "))
+    import time
+    start_time = time.time()
+    primes = sieve_of_eratosthenes(limit+1)
+    end_time = time.time()
+    print(primes)
+    print(f"計算時間: {end_time - start_time:.5f}秒")
